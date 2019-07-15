@@ -1,0 +1,21 @@
+<body>
+  <!-- <button (click)="getMyProfile">My Profile</button> -->
+  
+   
+        <div *ngIf="user">
+            <div  *ngIf="user.name !== 'User not found'">
+                <div  id="user-details" *ngIf="user.name.length > 0">
+                    <div id="profile" class="row">
+        <img class="ml-0 col-5" src={{user.avatar}} >
+        <div class="col-5 text-left">
+          <p class="repo">Name: <span appBold>{{user.name}}</span></p>
+          <p class="repo">Followers: {{user.followers}}</p>
+          <p class="repo">Following: {{user.following}}</p>
+          <p class="repo">Repos: {{user.repos}}</p>
+          <p class="repo">Bio: {{user.bio}}</p>
+          </div>
+          </div>
+          </div>
+          </div>
+          </div>
+</body>
